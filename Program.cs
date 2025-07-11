@@ -110,7 +110,7 @@
             //string? nullableReferenceType = null; // nullable string reference type
             #endregion
             #endregion
-            
+
             #region ObjectType
             // Object Type
             //object obj = new object(); // object type
@@ -266,6 +266,133 @@
             //Console.WriteLine("Age Flag is " + ageFlag);
             //Console.WriteLine("Salary is " + salary);
             //Console.WriteLine("Salary Flag is " + salaryFlag);
+
+            #endregion
+
+            #endregion
+
+            #region Operators
+
+            #region Unary ++,--
+
+            //int x = 0;
+            //Console.WriteLine(++x); // 1 // pre
+            //Console.WriteLine(x++); // 1 // post // after excution
+            //Console.WriteLine(x); // 2
+
+            #endregion
+
+            #region Binary + , - , * , / , %
+
+            //int x = 3;
+            //int y = 4;
+
+            //Console.WriteLine(x + y); // 7
+            //Console.WriteLine(x - y); // -1
+            //Console.WriteLine(x * y); // 12
+            //Console.WriteLine(x / y); // 0 because the two types are int
+            //Console.WriteLine((float)x / y); // 0.75 because one type is float(x)
+            //Console.WriteLine(x * 1.0 / y); // 0.75 because one type is float(1.0)
+            //Console.WriteLine(y % x); // y modulas x is 1
+            //Console.WriteLine(4 % 2); // is 0 because 4 can be devided by 2 
+
+            #endregion
+
+            #region Assignment = , += , -= , *= , /= , %=
+
+            //int x;
+            //x = 0; // =
+            //x += 1; // x = x + 1
+            //x -= 2; // x = x - 2
+            //x *= 2; // x = x * 2
+            //x /= 2; // x = x / 2
+            //x %= 2; // x = x % 2 
+
+            #endregion
+
+            #region Relational | Compresion == , != , > , < , <= , >=
+
+            //int x = 1;
+            //int y = 2;
+
+            //Console.WriteLine(x == y); // false
+            //Console.WriteLine(x != y); // true
+            //Console.WriteLine(x > y); // false
+            //Console.WriteLine(x < y); // true
+            //Console.WriteLine(x >= y); // false
+            //Console.WriteLine(x <= y); // true
+
+            #endregion
+
+            #region logical and(&&) , or(||) , not(!)
+
+            //int x = 1;
+            //int y = 2;
+
+            //// and &&
+            //// the two condtions must be ture to be the result ture
+            //// or || 
+            //// only one condtion required to be ture to be the result true
+            //// not !
+            //// change the value from ture to false or from false to true
+
+            //Console.WriteLine(x == y && x != y); // false
+            //Console.WriteLine(x != y || x == y); // true
+            //Console.WriteLine(!(x > y)); // true
+
+            #endregion
+
+            #region Bitwise & , | , ~ , ^ , >> , <<
+
+            //int x = 7; // 0111 in binary code
+            //int y = 5; // 0101 in binary code
+
+            //// & AND between the digits of the numbers in binary code
+            //// 1 & 1 = 1
+            //// 1 & 0 = 0
+            //// 0 & 1 = 0
+            //// 0 & 0 = 0
+            //Console.WriteLine(x & y); // 0111
+            //                          // 0101
+            //                          // 0101 // answer is 5
+
+            //Console.WriteLine(x | y);// 0111
+            //                         // 0101
+            //                         // 0111 // answer is 7
+            //Console.WriteLine(~x); // ~0111 => 1000 answer is -8 // mins because x is signed number
+            //Console.WriteLine(x ^ y); // xor gate returns 1 if the ones are odd
+            //                          // 0111
+            //                          // 0101
+            //                          // 0010 // answer is 2
+
+            //Console.WriteLine(x >> 2); // logical shift right by 2 means two times
+            //                         // 0111 => 0011 => 0001 // answer is 1
+            //Console.WriteLine(x << 2); // logical shift left by 2 means two times
+            //                           // 00111 => 01110 => 01110 // answer is 28
+
+            #endregion
+
+            #region Ternay condition ? if true : if false 
+
+            //if (1 > 2)
+            //    Console.WriteLine("1 is greater than 2");
+            //else
+            //    Console.WriteLine("1 is not greater than 2");
+
+            //Console.WriteLine(1 > 2 ? "1 is greater than 2" : "1 is not greater than 2");
+            //Console.WriteLine(1 < 2 ? "1 is less than 2" : "1 is not less than 2");
+
+            #endregion
+
+            #region Priority and Associativity
+
+            //int x = 7, y = 6, z = 3;
+
+            //Console.WriteLine(x+y*z); // y*z first then plus x
+            //Console.WriteLine((x+y)*z); // x+y first then multiple z
+            //Console.WriteLine(++x*y+z); // ++ first then multi y then plus z
+            //Console.WriteLine(x++*y+z); // multi y then plus then increment x
+            //Console.WriteLine((x++)*(y+z)); // the last thing is increment x
 
             #endregion
 
