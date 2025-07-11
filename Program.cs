@@ -143,6 +143,59 @@
 
             #endregion
 
+            #region Implicit & Explicit Casting
+
+            #region Implicit Casting [safe Casting]
+
+            //int x = 1000; // 4 byte
+            //long y = x; // 8 byte can contain 4 byte 
+            //Console.WriteLine(y);
+
+            #endregion
+
+            #region Explicit Casting
+
+            //int xx = 1000;
+            //long yy = (int)xx; // not required because 8 byte can contain 4 byte
+
+            //long yyy = 1_000_000_000_000_000;
+            //int xxx = (int)yyy; // required becouse 8 byte may contain value larger than 4 byte
+
+            //Console.WriteLine(xxx); // -1530494976 // risk // not true
+
+            //// checked
+            //checked // throw an exception if there is an error
+            //{
+            //    long a = 1_000_000_000_000_000; // 8 byte from user
+            //    int b = (int)a;
+            //    unchecked
+            //    {
+            //        Console.WriteLine(b);
+            //    }
+            //    // Unhandled exception. System.OverflowException: Arithmetic operation resulted in an overflow.
+            //}
+
+            //// protective code
+            //long aa = 1_000_000_000_000_000; // 8 byte from user
+            //if(aa > int.MaxValue || aa < int.MinValue)
+            //{
+            //    Console.WriteLine("Exception will be throw due to overflow");
+            //}
+            //else
+            //{
+            //    int bb = (int)aa;
+            //    Console.WriteLine(bb);
+            //}
+
+            //// casting form float or decimal to int or long fraction will lost
+            //decimal m = 10.123456m;
+            //int mm = (int)m;
+            //Console.WriteLine(mm);// 10 // no over flow because 10 can be exist in int type
+
+            #endregion
+
+            #endregion
+
         }
         // Demo of C#02
         #region Function and Documentation Comment
