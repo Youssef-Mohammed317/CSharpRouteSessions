@@ -398,6 +398,23 @@
 
             #endregion
 
+            #region String Formating
+
+            //int x = 1;
+            //int y = 2;  
+            //int z = x + y;
+            //// Interpolation
+            //Console.WriteLine($"{x} + {y} = {z}");
+            //// Concatenation
+            //Console.WriteLine(x + " + " + y + " = " + z);
+            //// Composite Format
+            //Console.WriteLine("{0} + {1} = {2}",x,y,z);
+            //// string.format
+            //string mes = string.Format("{0} + {1} = {2}", x, y, z);
+            //Console.WriteLine(mes);
+
+            #endregion
+
         }
         // Demo of C#02
         #region Function and Documentation Comment
