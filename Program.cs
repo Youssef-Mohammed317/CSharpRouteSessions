@@ -110,6 +110,7 @@
             //string? nullableReferenceType = null; // nullable string reference type
             #endregion
             #endregion
+            
             #region ObjectType
             // Object Type
             //object obj = new object(); // object type
@@ -121,8 +122,8 @@
             // CLR: allocate memory for Point class on the heap, and obj now references that memory
             #endregion
 
+            /*-----------------------------------------------------------------*/
             // Demo of C#03
-
             #region Fraction and Discard
 
             //float myFloat = 10.123456789F; // 6 digits after point
@@ -191,6 +192,80 @@
             //decimal m = 10.123456m;
             //int mm = (int)m;
             //Console.WriteLine(mm);// 10 // no over flow because 10 can be exist in int type
+
+            #endregion
+
+            #endregion
+
+            #region Casting
+
+            #region Convert
+
+            //Console.WriteLine("Please Enter Your Data");
+            //Console.Write("Name: ");
+            //string? name = Console.ReadLine(); // ? for nullable datatype
+            //Console.Write("Age: ");
+            //int? age = Convert.ToInt32(Console.ReadLine()); // string is the defalut input from console
+            //Console.Write("Salary: ");
+            //double? salary = Convert.ToDouble(Console.ReadLine()); // there is no toFloat
+
+            //// convert 
+            //// handle null and replace it by 0 for int and double
+            //// can not handle empaty so throw an exception 
+
+            //Console.WriteLine("Emp Data: ");
+            //Console.WriteLine("Name is " + name);
+            //Console.WriteLine("Age is " + age);
+            //Console.WriteLine("Salary is " + salary);
+
+            #endregion
+
+            #region Parse()
+
+            //Console.WriteLine("Please Enter Your Data");
+            //Console.Write("Name: ");
+            //string? name = Console.ReadLine(); // ? for nullable datatype
+            //Console.Write("Age: ");
+            //int? age = int.Parse(Console.ReadLine()); // string is the defalut input from console
+            //Console.Write("Salary: ");
+            //double? salary = double.Parse(Console.ReadLine()); // there is no toFloat
+
+            //// parse 
+            //// can`t handle null
+            //// can not handle empaty so throw an exception 
+
+            //Console.WriteLine("Emp Data: ");
+            //Console.WriteLine("Name is " + name);
+            //Console.WriteLine("Age is " + age);
+            //Console.WriteLine("Salary is " + salary);
+
+            #endregion
+
+            #region TryParse()
+
+            //Console.WriteLine("Please Enter Your Data");
+            //Console.Write("Name: ");
+            //string name = Console.ReadLine();
+            //Console.Write("Age: ");
+            //int age;
+            //bool ageFlag = int.TryParse(Console.ReadLine(),out age);
+            //Console.Write("Salary: ");
+
+
+            //double salary;
+            //bool salaryFlag = double.TryParse(Console.ReadLine(),out salary);
+
+
+            //// TryParse 
+            //// handle null and replace it by 0 for int and double
+            //// can handle empaty and repalce it by 0
+
+            //Console.WriteLine("Emp Data: ");
+            //Console.WriteLine("Name is " + name);
+            //Console.WriteLine("Age is " + age);
+            //Console.WriteLine("Age Flag is " + ageFlag);
+            //Console.WriteLine("Salary is " + salary);
+            //Console.WriteLine("Salary Flag is " + salaryFlag);
 
             #endregion
 
