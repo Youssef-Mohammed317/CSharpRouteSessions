@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            // Demo of C#02
+
+            #region Demo of C#02
             #region ErrorTypes
             // syntax error: missing semicolon, undeclared variable
             // Console.WriteLine("Hello, World!")
@@ -122,8 +123,9 @@
             // CLR: allocate memory for Point class on the heap, and obj now references that memory
             #endregion
 
+            #endregion
             /*-----------------------------------------------------------------*/
-            // Demo of C#03
+            #region Demo of C#03
             #region Fraction and Discard
 
             //float myFloat = 10.123456789F; // 6 digits after point
@@ -414,9 +416,13 @@
             //Console.WriteLine(mes);
 
             #endregion
+            #endregion
+            /*-----------------------------------------------------------------*/
+            #region Demo of C#04
+            #endregion
 
         }
-        // Demo of C#02
+        #region Demo of C#02
         #region Function and Documentation Comment
         // documentation comment: This method sums two integers
         /// <summary>
@@ -430,6 +436,7 @@
         //    // logic error: incorrect addition logic
         //    return x - y; // This should be return x + y;
         //}
+        #endregion
         #endregion
     }
 }
