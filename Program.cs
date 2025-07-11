@@ -121,7 +121,28 @@
             // CLR: allocate memory for Point class on the heap, and obj now references that memory
             #endregion
 
-            
+            // Demo of C#03
+
+            #region Fraction and Discard
+
+            //float myFloat = 10.123456789F; // 6 digits after point
+            //Console.WriteLine(myFloat);
+
+            //double myDouble = 10.123456789123456789123; // 14 digits after point 
+            //Console.WriteLine(myDouble);
+
+            //decimal myDecimal = 10.123456789123456789123456789123456789m; // 27 digits after point
+            //Console.WriteLine(myDecimal);
+
+            //long Number = 1_000_000_000_000_000;
+            //Console.WriteLine($"{Number:c}"); // $1,000,000,000,000,000.00
+            //Console.WriteLine(Number.ToString("c")); // $1,000,000,000,000,000.00
+
+            //var cultureInfo = new CultureInfo("ar-SA");
+            //Console.WriteLine(Number.ToString("c",cultureInfo)); // change c by the new currancy
+
+            #endregion
+
         }
         // Demo of C#02
         #region Function and Documentation Comment
