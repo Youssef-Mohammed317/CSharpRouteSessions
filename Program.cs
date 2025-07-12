@@ -496,6 +496,93 @@
             #endregion
             #endregion
 
+            #region GOTO
+            #region goto case in swith
+            //int budget = 2000;
+
+            //switch (budget)
+            //{
+            //    case 3000:
+            //        Console.WriteLine("Option 01");
+            //        Console.WriteLine("Option 02");
+            //        Console.WriteLine("Option 03");
+            //        break;
+            //    case 2000:
+            //        Console.WriteLine("Option 02");
+            //        Console.WriteLine("Option 03");
+            //        break;
+            //    case 1000:
+            //        Console.WriteLine("Option 03");
+            //        break;
+            //}
+
+            // using goto to prevent repeatiton
+            //switch (budget)
+            //{
+            //    case 3000:
+            //        Console.WriteLine("Option 01");
+            //        goto case 2000;
+            //        //break;
+            //    case 2000:
+            //        Console.WriteLine("Option 02");
+            //        goto case 1000;
+            //        //break;
+            //    case 1000:
+            //        Console.WriteLine("Option 03");
+            //        break;
+            //} 
+            #endregion
+
+            #region Loop Using goto
+        //    int negativeSum = 0;
+        //    int positiveSum = 0;
+        //    int oddPosSum = 0;
+        //    int oddNegSum = 0;
+        //    int evenPosSum = 0;
+        //    int evenNegSum = 0;
+        //Loop:
+        //    Console.Write("Enter a number (0 to exit): ");
+        //    bool isValid = int.TryParse(Console.ReadLine(), out int number);
+
+        //    if (number > 0)
+        //    {
+        //        positiveSum += number;
+        //        if (number % 2 == 0)
+        //        {
+        //            evenPosSum += number;
+        //        }
+        //        else
+        //        {
+        //            oddPosSum += number;
+        //        }
+        //        goto Loop;
+        //    }
+        //    else if (number < 0)
+        //    {
+        //        negativeSum += number;
+        //        if (int.Abs(number) % 2 == 0)
+        //        {
+        //            evenNegSum += number;
+        //        }
+        //        else
+        //        {
+        //            oddNegSum += number;
+        //        }
+        //        goto Loop;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Sum Of Pos is: " + positiveSum);
+        //        Console.WriteLine("Sum Of odd Pos is: " + oddPosSum);
+        //        Console.WriteLine("Sum Of even Pos is: " + evenPosSum);
+        //        Console.WriteLine("Sum Of Neg is: " + negativeSum);
+        //        Console.WriteLine("Sum Of odd Neg is: " + oddNegSum);
+        //        Console.WriteLine("Sum Of even Neg is: " + evenNegSum);
+        //    }
+
+            #endregion
+            #endregion
+
             #endregion
 
         }
