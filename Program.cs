@@ -419,6 +419,83 @@
             #endregion
             /*-----------------------------------------------------------------*/
             #region Demo of C#04
+            #region Conditional | Control Statements
+            //Console.Write("Please Enter A Month Number Exists In The 1st Quarter: ");
+            //bool flag = int.TryParse(Console.ReadLine(), out int monthNumber);
+            //Console.Write("Please Enter A Month Name Exists In The 1st Quarter: ");
+            //string monthName = Console.ReadLine() ?? "January"; // January is the default value if the user enter null
+
+            #region if ,if else, else
+            //if (monthNumber == 1) 
+            //{
+            //    Console.WriteLine("January"); 
+            //}
+            //else if (monthNumber == 2)
+            //{
+            //    Console.WriteLine("February");
+            //}
+            //else if (monthNumber == 3)
+            //{
+            //    Console.WriteLine("March");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid Month Number");
+            //}
+
+            //// if one line statement {} not required
+            //if (monthName == "January")
+            //    Console.WriteLine("January");
+            //else if (monthName == "February")
+            //    Console.WriteLine("February");
+            //else if (monthName == "March")
+            //    Console.WriteLine("March");
+            //else
+            //    Console.WriteLine("Invalid Month Name");
+            #endregion
+
+            #region switch case
+            //// jump table
+            //switch (monthNumber)
+            //{
+            //    case 1:
+            //        Console.WriteLine("January");
+            //        break; // break is required to exit the switch case in c++ is not required
+            //    case 2:
+            //        Console.WriteLine("February");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("March");
+            //        break;
+            //    case 4:
+            //    case 5:
+            //    case 6: // for multiple cases
+            //        Console.WriteLine("This is not a month in the 1st quarter");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid Month Number");
+            //        break;
+            //}
+
+            //switch (monthName)
+            //{ 
+            //    case "January":
+            //        Console.WriteLine("January");
+            //        break;
+            //    case "February":
+            //        Console.WriteLine("February");
+            //        break;
+            //    case "March":
+            //        Console.WriteLine("March");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid Month Name");
+            //        break;
+            //}
+
+            #endregion
+            #endregion
+
             #endregion
 
         }
