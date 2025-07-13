@@ -671,6 +671,197 @@
 
             #endregion
             #endregion
+            /*-----------------------------------------------------------------*/
+            #region Demo of C#05
+
+            #region Control Statements [Loops]
+
+            #region for - foreach
+            //int[] numbers = { 1, 2, 3, 4, 5, 6 };
+            #region No Loop
+
+            // 6 steps for printing if 1000 elements 1000 steps for printing
+            //Console.WriteLine(numbers[0]);
+            //Console.WriteLine(numbers[1]);
+            //Console.WriteLine(numbers[2]);
+            //Console.WriteLine(numbers[3]);
+            //Console.WriteLine(numbers[4]);
+            //Console.WriteLine(numbers[5]);
+
+            // 6 steps for mintanence if 1000 elements 1000 steps for mintenance
+            //Console.WriteLine($"Number is{numbers[0]}");
+            //Console.WriteLine($"Number is{numbers[1]}");
+            //Console.WriteLine($"Number is{numbers[2]}");
+            //Console.WriteLine($"Number is{numbers[3]}");
+            //Console.WriteLine($"Number is{numbers[4]}");
+            //Console.WriteLine($"Number is{numbers[5]}");
+
+            #endregion
+
+            #region for
+            // 19 steps for printing if 1000 elements 3001 steps for printing
+            // improve readability and maintainability
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    //Console.WriteLine(numbers[i]);
+
+            //    // 1 step for mintenance if 1000 elements 1 steps for mintenance and 1 for 100000000000 steps
+            //    Console.WriteLine($"Number is {numbers[i]}");  
+            //}
+
+            // continue; // skip the rest of the loop and continue to the next iteration
+            // break; // exit the loop
+
+            // print only odd numbers
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //   if( numbers[i] % 2 == 0)
+            //    {
+            //        continue; // skip the rest of the loop and continue to the next iteration
+            //    }
+            //    Console.WriteLine($"Number is {numbers[i]}");
+            //}
+
+            // break example
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    if (numbers[i] == 4)
+            //    {
+            //        break; // exit the loop
+            //    }
+            //    Console.WriteLine($"Number is {numbers[i]}");
+            //}
+            #endregion
+
+            #region foreach
+            // work with any collection 
+            // copy the collection to a new collection and iterate over it
+            //foreach (int number in numbers)
+            //{
+            //    // 1 step for mintenance if 1000 elements 1 steps for mintenance and 1 for 100000000000 steps
+            //    Console.WriteLine($"Number is {number}");
+            //}
+            #endregion
+
+            #endregion
+
+            #region while - do while
+            //int[] numbers = { 1, 2, 3, 4, 5, 6 };
+
+            #region while
+
+            //int i = 0;
+            //// while loop
+            //while (i < numbers.Length)
+            //{
+            //    Console.WriteLine($"Number is {numbers[i]}");
+            //    i++;
+            //}
+            //i = 0; // reset i to 0 for the next loop
+
+            //while (true)
+            //{
+            //    if (i >= numbers.Length)
+            //    {
+            //        break; // exit the loop
+            //    }
+            //    Console.WriteLine($"Number is {numbers[i]}");
+            //    i++;
+            //}
+            //i = 0; // reset i to 0 for the next loop
+
+            //// do while loop print at least one time using while
+            //while (true)
+            //{
+            //    Console.WriteLine($"Number is {numbers[i]}");
+            //    i++;
+            //    if (i >= numbers.Length)
+            //    {
+            //        break; // exit the loop
+            //    }
+            //}
+            #endregion
+
+            #region do while
+            //i = 0; // reset i to 0 for the next loop
+
+            //do
+            //{
+            //    Console.WriteLine($"Number is {numbers[i]}");
+            //    i++;
+            //} while (i < numbers.Length);
+
+            //i = 0; // reset i to 0 for the next loop
+            //// do while
+            //do
+            //{
+            //    Console.WriteLine($"Number is {numbers[i]}");
+            //    i++;
+            //    if (i >= numbers.Length)
+            //    {
+            //        break; // exit the loop
+            //    }
+            //} while (true);
+            //i = 0; // reset i to 0 for the next loop
+
+            //// while loop using do while
+            //do
+            //{   if (i >= numbers.Length)
+            //    {
+            //        break; // exit the loop
+            //    }
+            //    Console.WriteLine($"Number is {numbers[i]}");
+            //    i++;
+            //} while (true);
+            #endregion
+
+            #endregion
+
+            #region while to for and do while to for
+            //int[] numbers = { 1, 2, 3, 4, 5, 6, 7 };
+
+            // for
+            //for(int i = 0; i < numbers.Length; i++)
+            //{
+            //    Console.WriteLine($"Number is {numbers[i]}");
+            //}
+
+            // while
+            //int j = 0; // initialize the counter
+            //while (j < numbers.Length)
+            //{
+            //    Console.WriteLine($"Number is {numbers[j]}");
+            //    j++; // increment the counter
+            //}
+
+            // convert for to while
+            //j = 0; // initialize the counter
+            //for(; ; )
+            //{
+            //    if (j >= numbers.Length)
+            //    {
+            //        break; // exit the loop
+            //    }
+            //    Console.WriteLine($"Number is {numbers[j]}");
+            //    j++; // increment the counter
+            //}
+
+            // convert for to do while
+            //j = 0; // initialize the counter
+            //for (; ; )
+            //{
+            //    Console.WriteLine($"Number is {numbers[j]}");
+            //    j++; // increment the counter
+            //    if (j >= numbers.Length)
+            //    {
+            //        break; // exit the loop
+            //    }
+            //}
+
+            #endregion
+
+            #endregion
+            #endregion
 
         }
         #region Demo of C#02
