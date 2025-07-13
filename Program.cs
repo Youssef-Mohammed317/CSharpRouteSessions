@@ -534,55 +534,142 @@
             #endregion
 
             #region Loop Using goto
-        //    int negativeSum = 0;
-        //    int positiveSum = 0;
-        //    int oddPosSum = 0;
-        //    int oddNegSum = 0;
-        //    int evenPosSum = 0;
-        //    int evenNegSum = 0;
-        //Loop:
-        //    Console.Write("Enter a number (0 to exit): ");
-        //    bool isValid = int.TryParse(Console.ReadLine(), out int number);
+            //    int negativeSum = 0;
+            //    int positiveSum = 0;
+            //    int oddPosSum = 0;
+            //    int oddNegSum = 0;
+            //    int evenPosSum = 0;
+            //    int evenNegSum = 0;
+            //Loop:
+            //    Console.Write("Enter a number (0 to exit): ");
+            //    bool isValid = int.TryParse(Console.ReadLine(), out int number);
 
-        //    if (number > 0)
-        //    {
-        //        positiveSum += number;
-        //        if (number % 2 == 0)
-        //        {
-        //            evenPosSum += number;
-        //        }
-        //        else
-        //        {
-        //            oddPosSum += number;
-        //        }
-        //        goto Loop;
-        //    }
-        //    else if (number < 0)
-        //    {
-        //        negativeSum += number;
-        //        if (int.Abs(number) % 2 == 0)
-        //        {
-        //            evenNegSum += number;
-        //        }
-        //        else
-        //        {
-        //            oddNegSum += number;
-        //        }
-        //        goto Loop;
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("Sum Of Pos is: " + positiveSum);
-        //        Console.WriteLine("Sum Of odd Pos is: " + oddPosSum);
-        //        Console.WriteLine("Sum Of even Pos is: " + evenPosSum);
-        //        Console.WriteLine("Sum Of Neg is: " + negativeSum);
-        //        Console.WriteLine("Sum Of odd Neg is: " + oddNegSum);
-        //        Console.WriteLine("Sum Of even Neg is: " + evenNegSum);
-        //    }
+            //    if (number > 0)
+            //    {
+            //        positiveSum += number;
+            //        if (number % 2 == 0)
+            //        {
+            //            evenPosSum += number;
+            //        }
+            //        else
+            //        {
+            //            oddPosSum += number;
+            //        }
+            //        goto Loop;
+            //    }
+            //    else if (number < 0)
+            //    {
+            //        negativeSum += number;
+            //        if (int.Abs(number) % 2 == 0)
+            //        {
+            //            evenNegSum += number;
+            //        }
+            //        else
+            //        {
+            //            oddNegSum += number;
+            //        }
+            //        goto Loop;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Sum Of Pos is: " + positiveSum);
+            //        Console.WriteLine("Sum Of odd Pos is: " + oddPosSum);
+            //        Console.WriteLine("Sum Of even Pos is: " + evenPosSum);
+            //        Console.WriteLine("Sum Of Neg is: " + negativeSum);
+            //        Console.WriteLine("Sum Of odd Neg is: " + oddNegSum);
+            //        Console.WriteLine("Sum Of even Neg is: " + evenNegSum);
+            //    }
 
             #endregion
             #endregion
 
+            #region C# 7.0 introduced pattern matching with the switch statement
+            #region Grade With Case When
+            //int grade = 70;
+            //switch (grade)
+            //{
+            //    case int n when n >= 90:
+            //        Console.WriteLine("A");
+            //        break;
+            //    case int n when n >= 80:
+            //        Console.WriteLine("B");
+            //        break;
+            //    case int n when n >= 70:
+            //        Console.WriteLine("C");
+            //        break;
+            //    case int n when n >= 60:
+            //        Console.WriteLine("D");
+            //        break;
+            //    default:
+            //        Console.WriteLine("F");
+            //        break;
+            //}
+            #endregion
+
+            #region check type of variable
+
+            //object obj = "Hello";
+            //switch (obj)
+            //{
+            //    case string s:
+            //        Console.WriteLine($"String: {s}");
+            //        break;
+            //    case int i:
+            //        Console.WriteLine($"Integer: {i}");
+            //        break;
+            //    case null:
+            //        Console.WriteLine("Null value");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Unknown type");
+            //        break;
+            //}
+
+            #endregion
+            #endregion
+
+            #region C# 8.0 without alies name
+
+            //int grade = 70;
+
+            //string gradeLetter = grade switch
+            //{
+            //    >= 90 => "A",
+            //    >= 80 => "B",
+            //    >= 70 => "C",
+            //    >= 60 => "D",
+            //    _ => "F"  // _ is the default case
+            //};
+
+            //Person person = new Person 
+            //{
+            //    Name = "John",
+            //    Age = 30
+            //};
+
+            //string personInfo = person switch
+            //{
+            //    { Age: < 18 } => $"{person.Name} is a minor.",
+            //    { Age: >= 18 } => $"{person.Name} is an adult.",
+            //    _ => "Unknown person"
+            //};
+
+            #endregion
+
+            #region C# 9.0 allows property patterns with relational patterns
+
+            int grade = 70; 
+
+            string gradeLetter = grade switch
+            {
+                < 100 and >= 90 => "A", // there is or and 
+                < 90 and >= 80 => "B",
+                < 80 and >= 70 => "C",
+                < 70 and >= 60 => "D",
+                _ => "F"  // _ is the default case
+            };
+
+            #endregion
             #endregion
 
         }

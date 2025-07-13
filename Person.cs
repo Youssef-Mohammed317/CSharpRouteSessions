@@ -8,7 +8,7 @@ namespace CSharpRouteSessions
 {
     internal class Person
     {
-        public int X;
-        public int Y;
+        public string Name;
+        public int Age;
     }
 }
