@@ -1,4 +1,6 @@
-﻿namespace CSharpRouteSessions
+﻿using System.Text;
+
+namespace CSharpRouteSessions
 {
     internal class Program
     {
@@ -861,6 +863,153 @@
             #endregion
 
             #endregion
+
+            #region String
+            #region Example 01
+            //string name;
+
+            //name = new string("John");// 4 byte in stack and 8 byte for each char 2 byte in heap
+
+            //Console.WriteLine($"Name is {name}");
+            //Console.WriteLine($"Name is {name.GetHashCode()}");
+            //Console.WriteLine($"Name is {name.GetHashCode()}");
+
+            //string name2 = "John"; // 4 byte in stack and 8 byte for each char 2 byte in heap this is syntax sugar for the above code
+            //Console.WriteLine($"Name is {name2}");
+            //Console.WriteLine($"Name is {name2.GetHashCode()}");
+            #endregion
+
+            #region Example 02
+            //string name1 = "Omar";
+            //string name2 = "Ahmed";
+            //Console.WriteLine($"Name1 is {name1}");
+            //Console.WriteLine($"HashCode of Name1 is {name1.GetHashCode()}");
+            //Console.WriteLine($"Name2 is {name2}");
+            //Console.WriteLine($"HashCode of Name2 is {name2.GetHashCode()}");
+
+            //name2 = name1; // assign name1 to name2
+
+            //Console.WriteLine("After Assign");
+            //Console.WriteLine($"Name1 is {name1}");
+            //Console.WriteLine($"HashCode of Name1 is {name1.GetHashCode()}");
+            //Console.WriteLine($"Name2 is {name2}");
+            //Console.WriteLine($"HashCode of Name2 is {name2.GetHashCode()}");
+
+            //name1 = "Ali"; // change name1 to Ali
+
+            //Console.WriteLine("After Change Name1 to Ali");
+
+            //Console.WriteLine("After Assign");
+            //Console.WriteLine($"Name1 is {name1}");
+            //Console.WriteLine($"HashCode of Name1 is {name1.GetHashCode()}");
+            //Console.WriteLine($"Name2 is {name2}");
+            //Console.WriteLine($"HashCode of Name2 is {name2.GetHashCode()}");
+
+            #endregion
+
+            #region Ecample 03
+            //string msg = "Hello";
+            //Console.WriteLine(msg);
+            //Console.WriteLine(msg.GetHashCode());
+
+            //msg = msg + " World"; // concatenate strings
+            //Console.WriteLine(msg);
+            //Console.WriteLine(msg.GetHashCode());
+
+            //msg = "Hello";
+            //Console.WriteLine(msg);
+            //Console.WriteLine(msg.GetHashCode());
+            #endregion
+            #endregion
+
+            #region String Methods
+            //string msg = "   Hello World   ";
+
+            //Console.WriteLine(msg.Length);
+
+            //Console.WriteLine(msg.Trim());
+            //Console.WriteLine(msg.Trim().Length);
+            //Console.WriteLine(msg.TrimStart());
+            //Console.WriteLine(msg.TrimStart().Length);
+            //Console.WriteLine(msg.TrimEnd());
+            //Console.WriteLine(msg.TrimEnd().Length);
+
+            //Console.WriteLine(msg.ToUpper());
+            //Console.WriteLine(msg.ToLower());
+            //Console.WriteLine(msg.Contains("Hello")); // check if the string contains a substring
+
+            //Console.WriteLine(msg.Substring(3,5));
+            //Console.WriteLine(msg.IndexOf("Hello")); // find the index of a substring
+
+            //Console.WriteLine(msg.Replace("o","d"));
+            //Console.WriteLine(msg.Replace("Hello","Hi"));
+            //Console.WriteLine(msg.Replace("or","d"));
+
+            //Console.WriteLine(msg.Remove(0,3));
+            //Console.WriteLine(msg.Insert(0,"Hi"));
+            //Console.WriteLine(msg.Insert(0,"Hi").Replace("   "," "));
+            #endregion
+
+            #region StringBuilder
+            // string in immutable type made of array of characters
+            // stringbuilder is mutable type made of linked list of characters 
+
+            //StringBuilder sb = new StringBuilder("Hello");
+            //Console.WriteLine(sb);
+            //Console.WriteLine(sb.GetHashCode());
+
+
+            //sb.Append(" World"); // append string to the end of the stringbuilder
+            //Console.WriteLine(sb);
+            //Console.WriteLine(sb.GetHashCode());
+
+            //StringBuilder sb2 = new StringBuilder("Hello");
+            //Console.WriteLine(sb2);
+            //Console.WriteLine(sb2.GetHashCode());
+
+            //sb2 = sb; // assign sb to sb2
+            //Console.WriteLine("After Assign");
+            //sb2.Append(" World"); // append string to the end of the stringbuilder
+            //Console.WriteLine(sb2);
+            //Console.WriteLine(sb2.GetHashCode());
+
+            //Console.WriteLine(sb);
+            //Console.WriteLine(sb.GetHashCode());
+
+            #endregion
+
+            #region StringBuilder Methods
+            //StringBuilder sb = new StringBuilder("   Hello   ");
+
+            //Console.WriteLine(sb.Length); // 11
+
+            //Console.WriteLine(sb.Append("World")); //   Hello   World
+
+            //Console.WriteLine(sb); //    Hello   World
+
+            //sb.AppendLine("!"); // append a new line to the end of the stringbuilder
+
+            //Console.WriteLine(sb); //    Hello   World!
+
+            //Console.WriteLine(sb.Length); // 17
+
+            //sb.Replace("Hello", "Hi"); // replace a substring with another substring
+            //sb.Replace("World", "Everyone"); // replace a substring with another substring
+
+            //Console.WriteLine(sb); // Hi   Everyone!
+
+            //sb.Remove(0, 3); // remove a substring from the stringbuilder
+
+            //sb.AppendFormat("Your Age is {0} and Your Salary is {1}", 30, 1000.50); // format the stringbuilder
+            //Console.WriteLine("---");
+            //Console.WriteLine(sb);
+
+            //Console.WriteLine("---");
+            //sb.AppendJoin("_", "A", "B", "C", "D", "F"); // join multiple strings with a separator
+            //Console.WriteLine(sb);
+
+            #endregion
+            
             #endregion
 
         }
