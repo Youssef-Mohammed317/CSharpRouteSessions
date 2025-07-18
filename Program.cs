@@ -1009,7 +1009,399 @@ namespace CSharpRouteSessions
             //Console.WriteLine(sb);
 
             #endregion
+
+            #endregion
+            /*-----------------------------------------------------------------*/
+            #region Demo of C#06
+
+            #region Arrays
+
+            #region 1D Array
+            //int[] numbers; // address of the array in stack
+
+            ////Console.WriteLine(numbers); // null // numbers is not initialized yet
+            ////Console.WriteLine(numbers[0]); // Use of unassigned local variable 'numbers'
+
+            //numbers = new int[3]; // 3 elements array in heap
+
+
+            //Console.WriteLine(numbers[0]); // 0
+            //Console.WriteLine(numbers[1]); // 0
+            //Console.WriteLine(numbers[2]); // 0
+
+            //// asign value to the array
+            //numbers[0] = 1; // assign value to the first element
+            //numbers[1] = 2; // assign value to the second element
+            //numbers[2] = 3; // assign value to the third element
+
+            ////numbers[2] = 4.5; // gives a warning because 4.5 is a double and the array is of type int
+            ////Console.WriteLine(numbers[3]); // System.IndexOutOfRangeException
+
+            //// length of the array
+            //Console.WriteLine(numbers.Length); // size of the array is 3
+
+            //Console.WriteLine(numbers.Rank); // rank of the array is 1 (1D array)
+
+            //Console.WriteLine(numbers.GetType()); // type of the array is System.Int32[]
+
+            //Console.WriteLine(numbers.GetType().Name); // name of the array type is Int32[]
+
+            //Console.WriteLine(numbers.LongLength); // long length of the array is 3 == numbers.Length because it is 1D array
+
+            //int[] nums = new int[3]; // address int stack and 3 elements array in heap with initialization
+
+            //nums[0]= 4; // assign value to the first element
+            //nums[1] = 5; // assign value to the second element
+            //nums[2] = 6; // assign value to the third element
+
+            //int[] nums2 = new int[3] { 7, 8, 9 }; // address int stack and 3 elements array in heap with initialization
+            //int[] nums3 = new int[] { 7, 8, 9 }; // address int stack and 3 elements array in heap with initialization
+
+            //int[] nums4 = { 10, 11, 12 }; // shorter syntax for array initialization
+
+            //Console.WriteLine("Numbers Array:");
+            //Console.WriteLine(string.Join(", ", numbers)); // print the array elements
+
+            //int[] nums5 = nums4; // assign nums4 to nums5
+
+            // add elements to the array
+
+            //int[] num6  = new int[nums5.Length + 1];
+
+            //for (int i = 0; i < nums5.Length; i++)
+            //{
+            //    num6[i] = nums5[i]; // copy the elements from nums5 to num6
+            //}
+            //num6[num6.Length - 1] = 13; // add the new element to the end of the array
+
+            //// merge the two arrays
+
+            //int[] mergedArray = new int[nums5.Length + num6.Length];// create a new array with the size of the two arrays
+
+            //for (int i = 0; i < nums5.Length; i++)
+            //{
+            //    mergedArray[i] = nums5[i]; // copy the elements from nums5 to mergedArray
+            //}
+            //for (int i = 0; i < num6.Length; i++)
+            //{
+            //    mergedArray[nums5.Length + i] = num6[i]; // copy the elements from num6 to mergedArray
+            //}
+
+            #endregion
+
+            #region 2D Array
+            //int[,] matrix = new int[3, 3]; // 2D array with 3 rows and 3 columns
+
+            ////Console.WriteLine(matrix[0, 0]); // 0
+            ////Console.WriteLine(matrix[1, 1]); // 0
+
+            //// assign values to the 2D array
+            //matrix[0, 0] = 1; // assign value to the first row and first column
+            //matrix[0, 1] = 2; // assign value to the first row and second column
+
+            //int[,] matrix2 = new int[3, 3] // 2D array with 3 rows and 3 columns with initialization
+            //{
+            //    { 1, 2, 3 },
+            //    { 4, 5, 6 },
+            //    { 7, 8, 9 }
+            //};
+            ////Console.WriteLine(matrix2[0, 0]); // 1
+            ////Console.WriteLine(matrix2[1, 1]); // 5
+
+            //int[,] matrix3 =
+            //{
+            //    { 1, 2, 3 },
+            //    { 4, 5, 6 },
+            //    { 7, 8, 9 }
+            //};
+            ////Console.WriteLine(matrix3[3,3]);
+
+            //Console.WriteLine(matrix3.Length); // 9
+            //Console.WriteLine(matrix3.Rank); // 2 (2D array)
+            //Console.WriteLine(matrix3.LongLength); // 9
+            //Console.WriteLine(matrix3.GetLength(0)); // 3 (number of rows)
+            //Console.WriteLine(matrix3.GetLength(1)); // 3 (number of columns)
+
+            // print the 2D array
+            //for (int i = 0; i < matrix3.GetLength(0); i++) // loop through the rows
+            //{
+            //    for (int j = 0; j < matrix3.GetLength(1); j++) // loop through the columns
+            //    {
+            //        Console.Write(matrix3[i, j] + " "); // print the element
+            //    }
+            //    Console.WriteLine(); // new line after each row
+            //}
+            //// prin the 2D array using 1 loop
+            //for (int i = 0; i < matrix3.Length; i++)
+            //{
+            //    Console.Write(matrix3[i / matrix3.GetLength(1), i % matrix3.GetLength(1)] + " ");
+            //    // i / matrix3.GetLength(1) gives the row index
+            //    // i % matrix3.GetLength(1) gives the column index
+            //    if ((i + 1) % matrix3.GetLength(1) == 0) // check if the current index is the last column
+            //    {
+            //        Console.WriteLine(); // new line after each row
+            //    }
+            //}
+
+            //// modify the 2D array
+            //for (int i = 0; i < matrix3.GetLength(0); i++) // loop through the rows
+            //{
+            //    for (int j = 0; j < matrix3.GetLength(1); j++) // loop through the columns
+            //    {
+            //        matrix3[i, j] += 10; // add 10 to each element
+            //    }
+            //}
+
+            //// create and modify the 2D array by user then print it
+            //Console.Write("Enter the number of rows: ");
+            //bool rowFlag = int.TryParse(Console.ReadLine(), out int rows);
+            //Console.Write("Enter the number of columns: ");
+            //bool columnFlag = int.TryParse(Console.ReadLine(), out int columns);
+
+            //if (rowFlag && columnFlag && rows > 0 && columns > 0)
+            //{
+            //    int[,] userMatrix = new int[rows, columns]; // create a new 2D array with the user input size
+            //    // fill the 2D array with user input
+            //    for (int i = 0; i < rows; i++) // loop through the rows or userMatrix.GetLength(0)
+            //    {
+            //        for (int j = 0; j < columns; j++)
+            //        {
+            //            Console.Write($"Enter value for [{i}, {j}]: ");
+            //            bool valueFlag = int.TryParse(Console.ReadLine(), out int value);
+            //            if (valueFlag)
+            //            {
+            //                userMatrix[i, j] = value; // assign the value to the 2D array
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Invalid input. Please enter an integer.");
+            //                j--; // repeat the current column
+            //            }
+            //        }
+            //    }
+            //    // print the user-defined 2D array
+            //    Console.WriteLine("Your 2D Array:");
+            //    for (int i = 0; i < rows; i++)
+            //    {
+            //        for (int j = 0; j < columns; j++)
+            //        {
+            //            Console.Write(userMatrix[i, j] + " ");
+            //        }
+            //        Console.WriteLine();
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid input for rows or columns.");
+            //}
+
+            #endregion
+
+            #region Jagged Array
+            //// jagged array is an array of arrays
+            //int[][] jaggedArray = new int[3][]; // create a jagged array with 3 rows
+            //jaggedArray[0] = new int[2] { 1 , 2 }; // first row has 2 columns
+            ////jaggedArray[0] = { 1 , 3};// gives error
+            //jaggedArray[1] = new int[3] { 1, 2, 3 }; // second row has 3 columns
+            //jaggedArray[2] = new int[4] { 1, 2, 3, 4 }; // third row has 4 columns
+
+            //// print the jagged array
+            //for (int i = 0; i < jaggedArray.Length; i++) // loop through the rows
+            //{
+            //    for (int j = 0; j < jaggedArray[i].Length; j++) // loop through the columns of each row
+            //    {
+            //        Console.Write(jaggedArray[i][j] + " "); // print the element
+            //    }
+            //    Console.WriteLine(); // new line after each row
+            //}
+
+            //// print the jagged array using string.Join
+            //for (int i = 0; i < jaggedArray.Length; i++) // loop through the rows
+            //{
+            //    Console.WriteLine($"Row {i}: {string.Join(", ", jaggedArray[i])}"); // print the row
+            //}
+
+            //// modify the jagged array
+            //for (int i = 0; i < jaggedArray.Length; i++) // loop through the rows
+            //{
+            //    for (int j = 0; j < jaggedArray[i].Length; j++) // loop through the columns of each row
+            //    {
+            //        jaggedArray[i][j] += 10; // add 10 to each element
+            //    }
+            //}
+
+            //// create and modify the jagged array by user then print it
+            //Console.Write("Enter the number of rows: ");
+            //bool jaggedRowFlag = int.TryParse(Console.ReadLine(), out int jaggedRows);
+            //if (jaggedRowFlag && jaggedRows > 0)
+            //{
+            //    int[][] userJaggedArray = new int[jaggedRows][]; // create a new jagged array with the user input size
+            //    // fill the jagged array with user input
+            //    for (int i = 0; i < jaggedRows; i++) // loop through the rows or userJaggedArray.Length
+            //    {
+            //        Console.Write($"Enter the number of columns for row {i}: ");
+            //        bool columnFlag = int.TryParse(Console.ReadLine(), out int columns);
+            //        if (columnFlag && columns > 0)
+            //        {
+            //            userJaggedArray[i] = new int[columns]; // create a new array for the current row
+            //            for (int j = 0; j < columns; j++)
+            //            {
+            //                Console.Write($"Enter value for [{i}, {j}]: ");
+            //                bool valueFlag = int.TryParse(Console.ReadLine(), out int value);
+            //                if (valueFlag)
+            //                {
+            //                    userJaggedArray[i][j] = value; // assign the value to the jagged array
+            //                }
+            //                else
+            //                {
+            //                    Console.WriteLine("Invalid input. Please enter an integer.");
+            //                    j--; // repeat the current column
+            //                }
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Invalid input for columns.");
+            //            i--; // repeat the current row
+            //        }
+            //    }
+            //    // print the user-defined jagged array
+            //    Console.WriteLine("Your Jagged Array:");
+            //    for (int i = 0; i < userJaggedArray.Length; i++)
+            //    {
+            //        Console.WriteLine($"Row {i}: {string.Join(", ", userJaggedArray[i])}"); // print the row
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid input for rows.");
+            //}
+
+            #endregion
+
+            #region Array Methods
+            #region 1D Array
+            //int[] arr = { 1, 2, 3, 4 };
+
+            //Console.WriteLine(arr.Length); // 4
+            //Console.WriteLine(arr.Rank); // 1 (1D array)
+            //Console.WriteLine(arr.GetType()); // System.Int32[]
+            //Console.WriteLine(arr.GetType().Name); // Int32[]
+            //Console.WriteLine(arr.LongLength); // 4
+            //Console.WriteLine(arr.GetLength(0)); // 4 (number of elements in the array) of the first dimension
+            //Console.WriteLine(arr.GetLowerBound(0)); // 0 (lower bound of the array)
+            //Console.WriteLine(arr.GetUpperBound(0)); // 3 (upper bound of the array)
+            //Console.WriteLine(arr.GetValue(0)); // 1 (get the value at index 0)
+            //Console.WriteLine(arr.GetValue(1)); // 2 (get the value at index 1)
+            //Console.WriteLine(arr.GetValue(2)); // 3 (get the value at index 2)
+            //Console.WriteLine(arr.GetValue(3)); // 4 (get the value at index 3)
+            //                                    //Console.WriteLine(arr.GetValue(4)); // null (index out of range) // IndexOutOfRangeException
+
+
+            //int[] arr2 = { 1, 10, 60, 5, 3, 100, 0 };
+
+            //Console.Write("before:");
+            //Console.WriteLine(string.Join(", ", arr2)); // print the array elements
+            //Array.Sort(arr2); // sort the array in ascending order
+            //Console.Write("after:");
+            //Console.WriteLine(string.Join(", ", arr2)); // print the array elements
+            //Array.Reverse(arr2); // reverse the array
+            //Console.Write("after reverse:");
+            //Console.WriteLine(string.Join(", ", arr2)); // print the array elements
+            //Array.Clear(arr2, 1, 3); // clear the array (set all elements to default value) // 0 is the start index and 3 is the number of elements to clear
+            //Console.Write("after clear:");
+            //Console.WriteLine(string.Join(", ", arr2)); // print the array elements
+
+            //int[] arr3 = new int[3]; // copy the array to a new array
+
+            //Array.Copy(arr2, arr3, 3);
+
+            //Console.Write("after copy:");
+            //Console.WriteLine(string.Join(", ", arr3)); // print the array elements
+
+            //Console.WriteLine(string.Join(", ",arr2));
+            //Console.WriteLine(Array.IndexOf(arr2,100)); // find the index of an element in the array // 0
+            //Console.WriteLine(Array.IndexOf(arr2,30)); // -1 not exist
+            //Console.WriteLine(Array.IndexOf(arr2,0)); // if repeated it will return the first index // 1
+
+            //Console.WriteLine(Array.LastIndexOf(arr2,0)); // if repeated it will return the last index // 6
+
+            //Array.Resize(ref arr2, 10); // resize the array to 10 elements // will add default values to the new elements
+
+            //Console.WriteLine(string.Join(", ",arr2));// 
+            #endregion
+
+            #region 2D Array
+            //int[,] matrix = 
+            //{
+            //    { 1, 2, 3 },
+            //    { 4, 5, 6 },
+            //    { 7, 8, 9 }
+            //};
+
+            //Console.WriteLine(matrix.Length); // 9 (total number of elements in the 2D array)
+            //Console.WriteLine(matrix.Rank); // 2 (2D array)
+            //Console.WriteLine(matrix.GetType()); // System.Int32[,]
+            //Console.WriteLine(matrix.GetType().Name); // Int32[,]
+            //Console.WriteLine(matrix.LongLength); // 9 (total number of elements in the 2D array)
+            //Console.WriteLine(matrix.GetLength(0)); // 3 (number of rows)
+            //Console.WriteLine(matrix.GetLength(1)); // 3 (number of columns)
+            //Console.WriteLine(matrix.GetLowerBound(0)); // 0 (lower bound of the first dimension)
+            //Console.WriteLine(matrix.GetUpperBound(0)); // 2 (upper bound of the first dimension)
+            //Console.WriteLine(matrix.GetLowerBound(1)); // 0 (lower bound of the second dimension)
+            //Console.WriteLine(matrix.GetUpperBound(1)); // 2 (upper bound of the second dimension)
+            //Console.WriteLine(matrix.GetValue(0, 0)); // 1 (get the value at row 0, column 0)
+            //Console.WriteLine(matrix.GetValue(1, 1)); // 5 (get the value at row 1, column 1)
+
+            //Array.Sort(matrix); // sort the 2D array in ascending order (will not work as expected for 2D arrays)
+            // System.RankException: Only single dimension arrays are supported here.
+
+            //Array.Reverse(matrix); // reverse the 2D array (will not work as expected for 2D arrays)
+
+            //Array.IndexOf(matrix, 5); // find the index of an element in the 2D array (will not work as expected for 2D arrays)
+
+            //Array.Clear(matrix, 0, matrix.Length); // clear the 2D array (set all elements to default value) // no exception will be thrown
+
+
+            #endregion
+
+            #region Jagged Array
+            //int[][] ints = new int[3][]; // create a jagged array with 3 rows
+            //ints[0] = new int[2] { 2, 0 }; // first row has 2 columns
+            //ints[1] = new int[3] { 3, 4, 5 }; // second row has 3 columns
+            //ints[2] = new int[4] { 6, 7, 8, 9 }; // third row has 4 columns
+
+            //Console.WriteLine(ints.Length); // 3 (number of rows in the jagged array)
+            //Console.WriteLine(ints.Rank); // 1 (jagged array)
+            //Console.WriteLine(ints.GetType()); // System.Int32[][]
+            //Console.WriteLine(ints.GetType().Name); // Int32[][]
+            //Console.WriteLine(ints.LongLength); // 3 (number of rows in the jagged array)
+            //Console.WriteLine(ints[0].Length); // 2 (number of columns in the first row)
+            //Console.WriteLine(ints[1].Length); // 3 (number of columns in the second row)
+            //Console.WriteLine(ints[2].Length); // 4 (number of columns in the third row)
+            //Console.WriteLine(ints[0][0]); // 1 (get the value at row 0, column 0)
+            //Console.WriteLine(ints[1][1]); // 4 (get the value at row 1, column 1)
+            //Console.WriteLine(ints[2][2]); // 8 (get the value at row 2, column 2)
+            ////Console.WriteLine(ints[3][0]); // System.IndexOutOfRangeException: Index was outside the bounds of the array.
+
+            ////Array.Sort(ints); // sort the jagged array (will not work as expected for jagged arrays)
+            //// InvalidOperationException: Jagged arrays cannot be sorted directly.
+            //Array.Sort(ints[0]); // sort the first row of the jagged array
+            //Console.WriteLine(string.Join(", ", ints[0]));
+            //Array.Reverse(ints[1]); // reverse the second row of the jagged array
+            //Console.WriteLine(string.Join(", ", ints[1])); // print the second row of the jagged array
+            //// all other methods like IndexOf, Clear, Copy, Resize will not work as expected for jagged arrays
+            //// but you can use them on each row of the jagged array
+
+            ////Array.Clear(ints, 0, ints.Length); // System.ArgumentNullException:
+            ////Console.WriteLine(string.Join(", ", ints[0]));
             
+            #endregion
+            #endregion
+            #endregion
+            
+            
+
             #endregion
 
         }
