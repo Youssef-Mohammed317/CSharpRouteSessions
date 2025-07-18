@@ -1395,12 +1395,146 @@ namespace CSharpRouteSessions
 
             ////Array.Clear(ints, 0, ints.Length); // System.ArgumentNullException:
             ////Console.WriteLine(string.Join(", ", ints[0]));
-            
+
             #endregion
             #endregion
             #endregion
-            
-            
+
+            #region Functions
+            //Program.PrintShape(5, "Hello World"); // call the PrintShape method to print "Hello World" 5 times
+
+            //PrintShape(5, "Hello World"); // call the PrintShape method to print "Hello World" 5 times 
+
+            // pass by order
+            //PrintShape(5,"Hello World"); // call the PrintShape method to print "Hello World" 5 times
+
+            // pass by name
+            //PrintShape(count: 3, str: "Hello C#"); // call the PrintShape method to print "Hello C#" 3 times
+            //PrintShape(str: "Hello C#", count: 3); // call the PrintShape method to print "Hello C#" 3 times
+
+            //PrintShape(); // call the PrintShape method with default values
+
+            #region Function Take [Value Type] inputs [int, double, char, bool, etc.] 
+            //// pass by value
+            //int number = 5; // initialize a variable
+            //Console.WriteLine($"Before IncVal: {number}"); // print the initial value
+            //IncVal(number); // call the IncVal method to increment the number by 1
+            //Console.WriteLine($"After IncVal: {number}"); // print the value after the method call
+
+            //// pass by reference
+
+            //int refNumber = 5; // initialize a variable
+            //Console.WriteLine($"Before IncRef: {refNumber}"); // print the initial value
+            //IncRef(ref refNumber); // call the IncRef method to increment the number by 1
+            //Console.WriteLine($"After IncRef: {refNumber}"); // print the value after the method call
+
+            //// pass by output
+            //int outNumber; // declare a variable without initializing it
+            //IncOut(out outNumber); // call the IncOut method to initialize the number and increment it by 1
+            //Console.WriteLine($"After IncOut: {outNumber}"); // print the value after the method call
+
+            //// pass by in
+            //int inNumber = 5; // initialize a variable
+            //Console.WriteLine($"Before IncIn: {inNumber}"); // print the initial value
+            //int result = IncIn(inNumber); // call the IncIn method to increment the number by 1 and return the result
+            //Console.WriteLine($"After IncIn: {inNumber}"); // print the value after the method call
+            //Console.WriteLine($"Result of IncIn: {result}"); // print the result of the method call
+
+            //// for string
+            //string str = "Hello"; // initialize a string variable
+            //Console.WriteLine($"Before StrFunc: {str}"); // print the initial value
+            //string resultStr = StrFunc(str); // call the StrFunc method to concatenate "!" to the string
+            //Console.WriteLine($"After StrFunc: {str}"); // print the value after the method call
+            //Console.WriteLine($"Result of StrFunc: {resultStr}"); // print the result of the method call
+
+            //// for string with ref
+            //string str2 = "Hello"; // initialize a string variable
+            //Console.WriteLine($"Before StrFunc2: {str2}"); // print the initial value
+            //string resultStr2 = StrFunc2(ref str2); // call the StrFunc2 method to concatenate "!" to the string and modify it
+            //Console.WriteLine($"After StrFunc2: {str2}"); // print the value after the method call
+            //Console.WriteLine($"Result of StrFunc2: {resultStr2}"); // print the result of the method call
+
+            // by params (params keyword) (array of values)
+            //int[] numbers = { 1, 2, 3, 4, 5 }; // initialize an array
+            //Console.WriteLine($"Sum of numbers: {SumNumbers(numbers)}"); // call the SumNumbers method to calculate the sum of the array elements
+            //Console.WriteLine($"Sum of numbers with params: {SumNumbers(1, 2, 3, 4, 5)}"); // call the SumNumbersWithParams method to calculate the sum of the array elements using params keyword
+            #endregion
+
+            #region Function Take [Ref Type] inputs [class, array, etc.]
+            //// by value
+            //int[] arr = { 1, 2, 3, 4 }; // initialize an array
+            //Console.WriteLine("Before IncBy1ThenReturnSum:");
+            //Console.WriteLine(string.Join(", ", arr)); // print the initial array
+            //IncBy1ThenReturnSum(arr); // call the IncBy1ThenReturnSum method to increment each element by 1 and return the sum
+            //Console.WriteLine("After IncBy1ThenReturnSum:");
+            //Console.WriteLine(string.Join(", ", arr)); // print the array after the method call
+            //// the array is modified because it is a reference type and the method modifies the original array
+
+            //// by ref
+            //int[] arr2 = { 1, 2, 3, 4 }; // initialize an array
+            //Console.WriteLine("Before IncBy1ThenReturnSumRef:");
+            //Console.WriteLine(string.Join(", ", arr2)); // print the initial array
+            //IncBy1ThenReturnSumRef(ref arr2); // call the IncBy1ThenReturnSumRef method to increment each element by 1 and return the sum
+            //Console.WriteLine("After IncBy1ThenReturnSumRef:");
+            //Console.WriteLine(string.Join(", ", arr2)); // print the array after the method call
+
+            //int[] arr3 = { 1, 2, 3, 4 }; // initialize an array
+            //int[] arr4 = { 5, 6, 7, 8 }; // initialize another array
+            //// by value
+            //Console.WriteLine("Before SwapVal:");
+            //Console.WriteLine("arr3:" + string.Join(", ", arr3)); // print the initial array
+            //Console.WriteLine("arr4:" + string.Join(", ", arr4)); // print the initial array
+            //SwapVal(arr3, arr4); // call the Swap method to swap the two arrays
+            //Console.WriteLine("After SwapVal:");
+            //Console.WriteLine("arr3:" + string.Join(", ", arr3)); // print the first array after the method call
+            //Console.WriteLine("arr4:" + string.Join(", ", arr4)); // print the second array after the method call
+
+            //// by ref
+            //Console.WriteLine("Before SwapRef:");
+            //Console.WriteLine("arr3:" + string.Join(", ", arr3)); // print the initial array
+            //Console.WriteLine("arr4:" + string.Join(", ", arr4)); // print the initial array
+            //SwapRef(ref arr3, ref arr4); // call the Swap method to swap the two arrays
+            //Console.WriteLine("After SwapRef:");
+            //Console.WriteLine("arr3:" + string.Join(", ", arr3)); // print the first array after the method call
+            //Console.WriteLine("arr4:" + string.Join(", ", arr4)); // print the second array after the method call
+
+            #endregion
+            // reference type is a type that is stored in the heap and the variable holds the address of the object in the heap
+            // value type is a type that is stored in the stack and the variable holds the value itself
+            // reference type can be modified by the method and the changes will be reflected outside the method
+            // value type cannot be modified by the method and the changes will not be reflected outside the method
+            // so we need to use ref or out keywords to modify the value type in the method
+            // ref keyword is used to pass the variable by reference and out keyword is used to pass the variable by output
+            // in keyword is used to pass the variable by input and it is read-only in the method
+
+
+            #endregion
+            #region Escape sequance
+
+            //Console.WriteLine("/*\\"); // \ there is a special character in C# so we need to escape it with another \
+
+            //Console.WriteLine(@"/*\"); // @ to print a verbatim string (no need to escape special characters)
+
+            //Console.WriteLine("Hello \"World\""); // " to print " in the string we need to escape it with \
+
+            //Console.WriteLine("Hello \n World"); // \n to print a new line in the string
+
+            //Console.WriteLine("Hello \t World"); // \t to print a tab in the string
+
+            //Console.WriteLine("Hello\b\b World"); // \b to print a backspace in the string
+
+            //Console.WriteLine("Hello\rWorld"); // \r to print a carriage return in the string (moves the cursor to the beginning of the line)
+
+            //Console.WriteLine("Hello\\World"); // \\ to print \ in the string
+
+            //Console.WriteLine("Hello \u0041 World"); // \u to print a unicode character in the string (A in this case)
+
+            //Console.WriteLine("Hello \x0041 World"); // \x to print a hexadecimal unicode character in the string (A in this case)
+
+            //Console.WriteLine("Hello \U00000041 World"); // \U to print a unicode character in the string (A in this case)
+
+            //Console.WriteLine(@"Hello World! "); // @ to print a verbatim string (no need to escape special characters)
+            #endregion
 
             #endregion
 
@@ -1418,6 +1552,97 @@ namespace CSharpRouteSessions
         //{
         //    // logic error: incorrect addition logic
         //    return x - y; // This should be return x + y;
+        //}
+        #endregion
+        #endregion
+
+        #region Demo of C#06
+        #region Methods
+        //public static void PrintShape(int count = 4, string str = "_") // default values for parameters
+        //{
+        //    for (int i = 0; i < count; i++)
+        //    {
+        //        Console.WriteLine(str);
+        //    }
+        //}
+        //public static void IncVal(int number) // pass by value
+        //{
+        //    number++; // increment the number by 1
+        //    //Console.WriteLine($"Inside IncVal: {number}"); // this will print the incremented value
+        //}
+        //public static void IncRef(ref int number) // pass by reference
+        //{
+        //    number++; // increment the number by 1
+        //}
+
+        //public static void IncOut(out int number) // pass by output
+        //{
+        //    number = 0; // initialize the number to 0
+        //    number++; // increment the number by 1
+
+        //    int x = number; // copy the value of number : valid
+
+        //}
+        //public static int IncIn(in int number) // pass by in
+        //{
+        //    int x = number; // copy the value of number : valid
+        //                    //number++; // this will give an error because in parameter is read-only
+        //    return number + 1; // return the incremented value
+        //}
+
+        //public static string StrFunc(string str) // function that takes a string as input
+        //{
+        //    return str + "!"; // return the string
+        //}
+        //public static string StrFunc2(ref string str)
+        //{
+        //    str += "!"; // modify the string
+        //    return str + "!"; // return the modified string
+        //}
+
+        //public static void IncBy1ThenReturnSum(int[] arr)
+        //{
+        //    int sum = 0; // initialize the sum to 0
+        //    for (int i = 0; i < arr.Length; i++) // loop through the array
+        //    {
+        //        arr[i]++; // increment each element by 1
+        //        sum += arr[i]; // add each element to the sum
+        //    }
+        //    Console.WriteLine($"Sum of the array is: {sum}"); // print the sum
+        //}
+        //public static void IncBy1ThenReturnSumRef(ref int[] arr)
+        //{
+        //    int sum = 0; // initialize the sum to 0
+        //    for (int i = 0; i < arr.Length; i++) // loop through the array
+        //    {
+        //        arr[i]++; // increment each element by 1
+        //        sum += arr[i]; // add each element to the sum
+        //    }
+        //    Console.WriteLine($"Sum of the array is: {sum}"); // print the sum
+        //}
+
+        //public static void SwapRef(ref int[] arr1, ref int[] arr2)
+        //{
+        //    int[] temp = arr1; // store the first array in a temporary variable
+        //    arr1 = arr2; // assign the second array to the first array
+        //    arr2 = temp; // assign the temporary variable to the second array
+        //}
+
+        //public static void SwapVal(int[] arr1, int[] arr2)
+        //{
+        //    int[] temp = arr1; // store the first array in a temporary variable
+        //    arr1 = arr2; // assign the second array to the first array
+        //    arr2 = temp; // assign the temporary variable to the second array
+        //    // this will not change the original arrays outside this method
+        //}
+        //public static int SumNumbers(params int[] numbers) // params keyword allows passing a variable number of arguments
+        //{
+        //    int sum = 0; // initialize the sum to 0
+        //    foreach (var number in numbers) // loop through the array of numbers
+        //    {
+        //        sum += number; // add each number to the sum
+        //    }
+        //    return sum; // return the sum
         //}
         #endregion
         #endregion
