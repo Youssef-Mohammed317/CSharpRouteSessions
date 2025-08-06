@@ -64,14 +64,15 @@ namespace CSharpRouteSessions
              */
             BaseClass dr = new DerivedClass1();
             dr.DisplayMessage(); // Calls the overridden method in DerivedClass1
-            // because of the override keyword, this will call the method in DerivedClass1 
-            // Output: "Message from DerivedClass1"
+                                // because of the override keyword, this will call the method in DerivedClass1 
+                                // Output: "Message from DerivedClass1" // dynamic binding
 
             BaseClass dr2 = new DerivedClass2();
             dr2.DisplayMessage(); // Calls the new method in DerivedClass2, not the overridden one in DerivedClass1
                                   // because of the new keyword, this will call the method in BaseClass
                                   // Output: "Message from BaseClass"
                                   // new hides the base class method, not override it. still exists in BaseClass
+                                  // static binding
             #endregion
             #endregion
             #region Part02
