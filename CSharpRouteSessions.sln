@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Second Project", "..\Second
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Third Project", "..\Third Project\Third Project.csproj", "{CD6AEB9C-A1A0-42B9-ACC6-3D33CE0F599B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#OOPAssignment06", "C#OOPAssignment06", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A34DCBBC-23CF-4A73-949E-7C76A647C12A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{18748829-8203-4C73-8CAA-39B38D9AC415} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CD6AEB9C-A1A0-42B9-ACC6-3D33CE0F599B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40D608B3-726D-4E4C-9894-8F675DF82451}
