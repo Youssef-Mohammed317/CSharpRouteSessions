@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpRouteSessions", "CSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstProject", "..\FirstProject\FirstProject.csproj", "{A34DCBBC-23CF-4A73-949E-7C76A647C12A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Second Project", "..\Second Project\Second Project.csproj", "{18748829-8203-4C73-8CAA-39B38D9AC415}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A34DCBBC-23CF-4A73-949E-7C76A647C12A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A34DCBBC-23CF-4A73-949E-7C76A647C12A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A34DCBBC-23CF-4A73-949E-7C76A647C12A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18748829-8203-4C73-8CAA-39B38D9AC415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18748829-8203-4C73-8CAA-39B38D9AC415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18748829-8203-4C73-8CAA-39B38D9AC415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18748829-8203-4C73-8CAA-39B38D9AC415}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
